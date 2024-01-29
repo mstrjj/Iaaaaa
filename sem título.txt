@@ -1,0 +1,18 @@
+**Abaixo estara a lib da nossa Ui
+
+local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/7yhx/kwargs_Ui_Library/main/source.lua"))()
+
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+mouse.KeyDown:connect(function(key)
+    if key == "w" then
+        player.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Flying)
+    end
+end)
+
+mouse.KeyUp:connect(function(key)
+    if key == "w" then
+        player.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Freefall)
+    end
+end)
